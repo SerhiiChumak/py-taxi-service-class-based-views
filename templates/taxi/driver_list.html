@@ -1,9 +1,9 @@
 {% extends "base.html" %}
 {% block content %}
-    {% if driver_list %}
+    {% if driver.cars.exists %}
         <ul>
             {% for driver in driver_list %}
-                <li><a href="{% url 'taxi:driver-detail' driver.id %}">{{ driver.username }} ({{ driver.first_name }} {{ driver.last_name }})</a></li>
+                <td><a href="{% url 'taxi:driver-detail' driver.pk %}">{{ driver.username }}</a></td>
             {% endfor %}
         </ul>
     {% else %}
