@@ -42,7 +42,7 @@ INSTALLED_APPS = [
 
 
 if DEBUG:
-  INSTALLED_APPS += ["debug_toolbar"]
+    INSTALLED_APPS += ["debug_toolbar"]
 
 
 MIDDLEWARE = [
@@ -57,7 +57,7 @@ MIDDLEWARE = [
 
 
 if DEBUG:
-  MIDDLEWARE.insert(1, 'debug_toolbar.middleware.DebugToolbarMiddleware')
+    MIDDLEWARE.insert(1, "debug_toolbar.middleware.DebugToolbarMiddleware")
 
 
 ROOT_URLCONF = "taxi_service.urls"
