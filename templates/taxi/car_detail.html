@@ -3,7 +3,7 @@
         <p>Model: {{ car.model }}</p>
         <p>Manufacturer: {{ car.manufacturer.name }}</p>
         <p>Country: {{ car.manufacturer.country }}</p>
-    {% if car.drivers %}
+    {% if car.drivers.all %}
         <h3>Drivers:</h3>
         <ul>
             {% for driver in car.drivers.all %}

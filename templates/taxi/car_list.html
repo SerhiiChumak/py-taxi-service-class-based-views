@@ -2,9 +2,9 @@
 {% block content %}
     {% if driver.cars.all %}
         {% for car in driver.cars.all %}
-            <p>
-                {{ car.model }} - {{ car.manufacturer.name }}
-            </p>
+            <li>
+                <a href="{% url 'taxi:car-detail' car.id %}">{{ car.model }} - {{ car.manufacturer.name }}</a>
+            </li>
         {% endfor %}
     {% else %}
     <p>No cars assigned.</p>
